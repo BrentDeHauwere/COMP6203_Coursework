@@ -213,10 +213,7 @@ public class OpponentModelling
             double w = getIssueList()[i].getWeight();
             ValueDiscrete val = (ValueDiscrete) bidVal.get(this.issueIdList[i]);
 
-            if(getIssueList()[i].getValues().contains(val))
-            {
-                util += getIssueList()[i].getDoubleValue(val) * w;
-            }
+            if(getIssueList()[i].getValues().contains(val)) util += getIssueList()[i].getDoubleValue(val) * w;
         }
         return util;
     }
